@@ -14,15 +14,16 @@ const displayVideos = (videos) => {
   videos.forEach((video) => {
     const div = document.createElement("div");
     div.innerHTML = `
-    <div class="card h-full shadow-xl">
+    <div class="card h-full">
        <figure><img class="w-full h-80 object-cover" src="${video.thumbnail}" alt="" /></figure>
       <div class="flex items-center gap-4 p-6">
        <div class="pp">
-         <img class="w-10 h-10 rounded-full" src="${video.authors[0].profile_picture}" alt="" />
+         <img class="w-10 h-10 rounded-full object-cover" src="${video.authors[0].profile_picture}" alt="" />
        </div> 
          <div>
           <p class="font-bold text-2xl">${video.title}</p>
-          <p>${video.authors[0].profile_name}</p>
+          <p class="flex items-center gap-2">${video.authors[0].profile_name} <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/6364/6364343.png" /> </p>
+          <p>${video.others.views} views </p>
         </div> 
       </div>
    </div>
