@@ -54,6 +54,9 @@ const displayDetails = (video) => {
   <p>${video.description}</p>
   `;
 
+  // way-1
+  // document.getElementById("showModalData").click();
+  //way-2
   document.getElementById("customModal").showModal();
 };
 
